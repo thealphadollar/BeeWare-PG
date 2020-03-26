@@ -1,0 +1,45 @@
+[build-system]
+requires = ["briefcase"]
+
+[tool.briefcase]
+project_name = "BeeWare-PG"
+bundle = "me.thealphadollar"
+version = "0.0.1"
+url = "https://thealphadollar.me/beewarepg"
+license = "MIT license"
+author = 'thealphadollar'
+author_email = "code@thealphadollar.me"
+
+[tool.briefcase.app.beewarepg]
+formal_name = "BeeWare-PG"
+description = "A PlayGround To Learn About The Workings of BeeWare"
+icon = "src/beewarepg/resources/beewarepg"
+sources = ['src/beewarepg']
+requires = []
+
+
+[tool.briefcase.app.beewarepg.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.beewarepg.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.beewarepg.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev18',
+]
+
+# Mobile deployments
+[tool.briefcase.app.beewarepg.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev18',
+]
+
+[tool.briefcase.app.beewarepg.android]
+requires = [
+    'toga-android>=0.3.0.dev18',
+]
